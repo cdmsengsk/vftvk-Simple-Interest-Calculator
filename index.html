@@ -12,7 +12,7 @@
         <label for="principal">Ammount</label>
         <input type="number"  id="principal" name="principal">  <br/>
         <label for="rate">Rate</label>
-        <input type="range"  id="rate" name="rate" min=1 max=20 value=10.25>
+        <input type="range"  id="rate" name="rate" min=1 max=20 value=10.25 onchange="updateRate()">
         <span id="rate_val" name="rate_val">10.25%</span>  <br/>
         <label for="years">No. of Years</label>
         <select  id="years" name="years"> 
@@ -34,5 +34,6 @@
         </div>
         <footer>
             &#169; This Calculator belogs to Simon Kirkland
+        </footer>
     </body>
 </html>
