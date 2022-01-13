@@ -13,11 +13,11 @@
                 <!-- define form objects paragraph tags used to prevent inputs from expanding to entire grid column width -->
                 <label class="column_1" for="principal" >Ammount</label>
                 <p class=" column_2">
-                    <input type="number" id="principal" name="principal" oninput="checkPrincipal()">
+                    <input type="number" id="principal" name="principal">
                 </p>
                 <label class="column_1" for="rate">Rate</label>
                 <p class="column_2">
-                    <input type="range" id="rate" name="rate" min=1 max=20 value=10.25 step="0.25" oninput="updateRate()">
+                    <input type="range" id="rate" name="rate" min=1 max=20 value=10.25 step="0.25" oninput="updateRate(); checkPrincipal()">
                     <span id="rate_val" name="rate_val">10.25%</span>
                 </p>
                 <label class="column_1" for="years" >No. of Years</label>
