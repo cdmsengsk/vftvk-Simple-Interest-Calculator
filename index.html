@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Simple Interest Calculator<title>
+        <!-- header reference script and stylesheet files and define title -->
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Simple Interest Calculator</title>
     </head>
     <body>
         <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-
-        <label for="principal">Ammount</label>
-        <input type="number"  id="principal" name="principal">  <br/>
-        <label for="rate">Rate</label>
-        <input type="range"  id="rate" name="rate" min=1 max=20 value=10.25 onchange="updateRate()">
-        <span id="rate_val" name="rate_val">10.25%</span>  <br/>
-        <label for="years">No. of Years</label>
-        <select  id="years" name="years"> 
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select> <br/>
-        <label for="result">Interest</label>
-        <span id="result" name ="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+            <h1>Simple Interest Calculator</h1>
+            <form>
+                <!-- define form objects paragraph tags used to prevent inputs from expanding to entire grid column width -->
+                <label class="column_1" for="principal" >Ammount</label>
+                <p class=" column_2">
+                    <input type="number" id="principal" name="principal" oninput="checkPrincipal()">
+                </p>
+                <label class="column_1" for="rate">Rate</label>
+                <p class="column_2">
+                    <input type="range" id="rate" name="rate" min=1 max=20 value=10.25 step="0.25" oninput="updateRate()">
+                    <span id="rate_val" name="rate_val">10.25%</span>
+                </p>
+                <label class="column_1" for="years" >No. of Years</label>
+                <p class="column_2">
+                    <!-- define year selector and options -->
+                    <select id="years" name="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </p>
+                <p class="column_full">
+                    <button class="column_1" type="button" onclick="compute()">Compute Interest</button>
+                </p>
+                <p class="column_full">
+                    <span id="result" name="result" disply="table-caption"></span>
+                </p>
+            </form> 
+            <footer>
+                &#169; This Calculator belogs to Simon Kirkland
+            </footer>
         </div>
-        <footer>
-            &#169; This Calculator belogs to Simon Kirkland
-        </footer>
-    </body>
+</body>
 </html>
