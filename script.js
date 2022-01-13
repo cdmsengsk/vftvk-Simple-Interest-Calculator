@@ -17,12 +17,16 @@ function compute() {
 }
 
 function checkPrincipal() {
-    // Checks that the pricipal enetered is greater thank zero using an if statement. Throws alert, resets field and focuses if invalid value is entered. 
+    // Checks that the pricipal enetered is greater thank zero using an if statement. If invalid number is entered throws alert, resets fields and focuses if invalid value is entered. Else progressed to computing result. 
     var principal = document.getElementById("principal").value;
     if (principal <= 0) {
         alert("Please enter a positive number");
         document.getElementById("principal").value = "";
+        document.getElementById("result").innerText = "";
         document.getElementById("principal").focus();
+    }
+    else {
+        compute();
     }
 }
 
